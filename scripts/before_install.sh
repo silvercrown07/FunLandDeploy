@@ -1,5 +1,5 @@
-#!/usr/bin/bash
+#!/bin/bash
 
-$(aws ecr get-login --no-include-email)
+$(aws ecr get-login --region ap-southeast-1 --no-include-email)
 
-echo "first commit"
+docker pull funland
