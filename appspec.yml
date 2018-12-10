@@ -1,0 +1,5 @@
+version: 0.1
+os: linux
+hooks:
+    BeforeInstall:
+        - location: scripts/before_install.sh
