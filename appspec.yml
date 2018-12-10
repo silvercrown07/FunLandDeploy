@@ -3,4 +3,5 @@ os: linux
 hooks:
     BeforeInstall:
         - location: scripts/before_install.sh
+          runas: ec2-user
           timeout: 10
