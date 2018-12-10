@@ -1,5 +1,18 @@
 version: 0.1
 os: linux
+files:
+    - source: /
+      destination: /app
+      override: true
+permissions:
+    - object: /app/scripts
+      pattern: "*.sh"
+      owner: ubuntu
+      group: ubuntu
+      mode: 755
+      type:
+          - file
 hooks:
     BeforeInstall:
         - location: scripts/before_install.sh
+          timeout: 10
